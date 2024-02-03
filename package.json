@@ -3,6 +3,16 @@
   "displayName": "Keep Eye C++",
   "description": "Colorfull and Dark",
   "version": "0.0.1",
+  "publisher": "HupanCoder",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FranciszekCieslik/keep_eye_theme.git"
+  },
+  "keywords": [
+    "theme",
+    "dark theme",
+    "keep_eye_theme"
+  ],
   "engines": {
     "vscode": "^1.86.0"
   },
