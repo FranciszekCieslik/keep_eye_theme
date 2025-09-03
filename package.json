@@ -2,7 +2,7 @@
   "name": "keep-eye-theme",
   "displayName": "Keep Eye",
   "description": "",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "publisher": "HupanCoder",
   "repository": {
     "type": "git",
@@ -11,6 +11,7 @@
   "keywords": [
     "theme",
     "dark theme",
+    "green theme",
     "keep_eye_theme"
   ],
   "engines": {
