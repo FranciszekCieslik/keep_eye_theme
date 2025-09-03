@@ -1,6 +1,8 @@
 # Keep Eye
 Keep Eye is visual studio code dark theme.
 
+https://github.com/user-attachments/assets/3063ce48-c149-4d0d-b634-5d0d273eded4
+
 ## Installation
 Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
 
