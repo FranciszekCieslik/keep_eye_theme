@@ -20,3 +20,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Green panel
 - Black terminal with green foreground and white cursor
 - Greenish background color when dragging editors
+
+## [1.2.0] - 2025-12-15
+### Changed
+- green line numbers
+- green Whitespace
