@@ -3,7 +3,7 @@
   "displayName": "Keep Eye",
   "description": "VSC Dark Theme",
   "icon": "./logo.jpg",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "publisher": "HupanCoder",
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
   "contributes": {
     "configurationDefaults": {
       "editor.renderWhitespace": "boundary",
-        "editor.guides.indentation": true
+      "editor.guides.indentation": true
     },
     "themes": [
       {
