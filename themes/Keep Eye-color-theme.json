@@ -1,5 +1,6 @@
 {
 	"name": "Keep Eye",
+	"type": "dark",
 	"colors": {
 		"editor.background": "#00000078",
 		"editor.foreground": "#fffefe",
@@ -24,13 +25,38 @@
 		"terminal.background": "#000000",
 		"terminal.foreground":"#00ff77af",
 		"terminalCursor.foreground": "#f3f3f3",
-
+		
 		"outputView.background": "#000000",
 		
 		"statusBar.background":  "#00ff917b",
 		"activityBarBadge.background": "#00a231e3",	
-
+		
 		"editorGroup.dropBackground":"#97fdce63",
+		
+		"editorLineNumber.foreground": "#97fdce63",
+    	"editorLineNumber.activeForeground": "#00ff91",
+
+		"editorWhitespace.foreground": "#00ff917b",
+			
+		"editorIndentGuide.background1": "#00c85344",
+		"editorIndentGuide.activeBackground1": "#00e676",
+
+		"editorIndentGuide.background2": "#1de9b644",
+		"editorIndentGuide.activeBackground2": "#1de9b6",
+
+		"editorIndentGuide.background3": "#76ff0340",
+		"editorIndentGuide.activeBackground3": "#76ff03",
+
+		"editorIndentGuide.background4": "#aeea0040",
+		"editorIndentGuide.activeBackground4": "#aeea00",
+
+		"editorIndentGuide.background5": "#64dd1740",
+		"editorIndentGuide.activeBackground5": "#64dd17",
+
+		"editorIndentGuide.background6": "#2e7d3240",
+		"editorIndentGuide.activeBackground6": "#4caf50",
+
+    	"editorRuler.foreground": "#00ff7733",
 	},
 	"tokenColors": [
 		// VISUAL STUDIO DARK
