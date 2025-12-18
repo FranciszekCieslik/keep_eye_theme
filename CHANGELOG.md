@@ -25,3 +25,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Changed
 - green line numbers
 - green Whitespace
+
+## [2.0.0] - 2025-12-18
+### Added
+- green indents

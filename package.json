@@ -1,9 +1,10 @@
 {
   "name": "keep-eye-theme",
   "displayName": "Keep Eye",
-  "description": "VSC Dark Theme",
-  "icon": "./logo.jpg",
-  "version": "1.2.3",
+  "description": "vsc dark theme with green indents",
+  "icon": "./assets/logo.jpg",
+  "license": "MIT",
+  "version": "2.0.0",
   "publisher": "HupanCoder",
   "repository": {
     "type": "git",
@@ -19,19 +20,134 @@
     "vscode": "^1.86.0"
   },
   "categories": [
-    "Themes"
+    "Themes",
+    "Other"
+  ],
+  "activationEvents": [
+      "*"
   ],
   "contributes": {
-    "configurationDefaults": {
-      "editor.renderWhitespace": "boundary",
-      "editor.guides.indentation": true
-    },
     "themes": [
       {
         "label": "Keep Eye",
         "uiTheme": "vs-dark",
         "path": "./themes/Keep Eye-color-theme.json"
       }
-    ]
+    ],
+    "configurationDefaults": {
+      "editor.renderWhitespace": "boundary",
+      "editor.guides.indentation": true
+    },
+    "configuration": {
+      "type": "object",
+      "title": "Indent-Rainbow configuration",
+      "properties": {
+        "indentRainbow.includedLanguages": {
+          "type": "array",
+          "default": [],
+          "description": "For which languages indent-rainbow should be activated. When empty will use for all languages."
+        },
+        "indentRainbow.excludedLanguages": {
+          "type": "array",
+          "default": [
+            "plaintext"
+          ],
+          "description": "For which languages indent-rainbow should be deactivated. When left empty will ignore."
+        },
+        "indentRainbow.ignoreErrorLanguages": {
+          "type": "array",
+          "default": [
+            "markdown"
+          ],
+          "description": "For which languages indent-rainbow should skip indent error detection (use '*' to deactivate errors for all languages)."
+        },
+        "indentRainbow.updateDelay": {
+          "type": "integer",
+          "default": 100,
+          "description": "The delay in ms until the editor gets updated."
+        },
+        "indentRainbow.errorColor": {
+          "type": "string",
+          "default": "rgba(128,32,32,0.6)",
+          "description": "Indent color for when there is an error in the indentation, for example if you have your tabs set to 2 spaces but the indent is 3 spaces. Can be any type of web based color format (hex, rgba, rgb)."
+        },
+        "indentRainbow.tabmixColor": {
+          "type": "string",
+          "default": "rgba(128,32,96,0.6)",
+          "description": "Indent color for when there is a mix between spaces and tabs in the indentation. Can be any type of web based color format (hex, rgba, rgb) or a empty string(to be disabled this coloring)."
+        },
+        "indentRainbow.ignoreLinePatterns": {
+          "type": "array",
+          "default": [
+            "/[ \t]* [*]/g",
+            "/[ \t]+[/]{2}/g"
+          ],
+          "description": "Skip error highlighting for RegEx patterns. Defaults to c/cpp decorated block and full line comments."
+        },
+        "indentRainbow.colors": {
+          "type": "array",
+          "default": [
+            "rgba(0, 200, 83, 0.17)",
+            "rgba(29, 233, 182, 0.17)",
+            "rgba(118, 255, 3, 0.17)",
+            "rgba(174, 234, 0, 0.17)",
+            "rgba(100, 221, 23, 0.17)",
+            "rgba(46, 125, 50, 0.17)"
+          ],
+          "description": "An array with color (hex, rgba, rgb) strings which are used as colors, can be any length."
+        },
+        "indentRainbow.colorOnWhiteSpaceOnly": {
+          "type": "boolean",
+          "default": false,
+          "description": "If error color is disabled, indent colors will be rendered until the length of rendered characters (white spaces, tabs, and other ones) is divisible by tabsize. Turn on this option to render white spaces and tabs only."
+        },
+        "indentRainbow.indicatorStyle": {
+          "type": "string",
+          "default": "classic",
+          "enum": [
+            "classic",
+            "light"
+          ],
+          "markdownDescription": "Classic mode uses a full colored tab to indicate the indendation. Light mode will only display a colored border similar to the default indent guide lines. You can disable the default indicators with `#editor.guides.indentation#`."
+        },
+        "indentRainbow.lightIndicatorStyleLineWidth": {
+          "type": "number",
+          "default": 1,
+          "description": "This property defines the indent indicator lineWidth when using light mode."
+        }
+      }
+    }
+  },
+  "browser": "./dist/web/extension.js",
+  "main": "./out/src/extension",
+  "scripts": {
+    "vscode:prepublish": "npm run compile && npm run package-web",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "compile-web": "webpack --config ./build/web-extension.webpack.config.js",
+    "watch-web": "webpack --watch --config ./build/web-extension.webpack.config.js",
+    "package-web": "webpack --mode production --devtool hidden-source-map --config ./build/web-extension.webpack.config.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.107.0",
+    "@typescript-eslint/eslint-plugin": "^4.11.1",
+    "@typescript-eslint/parser": "^4.11.1",
+    "eslint": "^7.16.0",
+    "glob": "^7.1.6",
+    "mocha": "^11.7.5",
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.1.2",
+    "vscode-test": "^1.4.1",
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "@vscode/test-web": "^0.0.8"
   }
 }
