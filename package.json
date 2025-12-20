@@ -4,7 +4,7 @@
   "description": "vsc dark theme with green indents",
   "icon": "./assets/logo.jpg",
   "license": "MIT",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "publisher": "HupanCoder",
   "repository": {
     "type": "git",
