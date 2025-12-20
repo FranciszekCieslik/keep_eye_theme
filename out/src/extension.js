@@ -29,10 +29,12 @@ function activate(context) {
     const lightIndicatorStyleLineWidth = vscode.workspace.getConfiguration('indentRainbow')['lightIndicatorStyleLineWidth'] || 1;
     // Colors will cycle through, and can be any size that you want
     const colors = vscode.workspace.getConfiguration('indentRainbow')['colors'] || [
-        "rgba(255,255,64,0.07)",
-        "rgba(127,255,127,0.07)",
-        "rgba(255,127,255,0.07)",
-        "rgba(79,236,236,0.07)"
+        "rgba(0, 200, 83, 0.17)",
+        "rgba(29, 233, 182, 0.17)",
+        "rgba(118, 255, 3, 0.17)",
+        "rgba(174, 234, 0, 0.17)",
+        "rgba(100, 221, 23, 0.17)",
+        "rgba(46, 125, 50, 0.17)"
     ];
     // Loops through colors and creates decoration types for each one
     colors.forEach((color, index) => {

@@ -17,7 +17,7 @@
     "keep_eye_theme"
   ],
   "engines": {
-    "vscode": "^1.86.0"
+    "vscode": "^1.107.0"
   },
   "categories": [
     "Themes",
@@ -121,15 +121,14 @@
   "browser": "./dist/web/extension.js",
   "main": "./out/src/extension",
   "scripts": {
-    "vscode:prepublish": "npm run compile && npm run package-web",
+    "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js",
     "compile-web": "webpack --config ./build/web-extension.webpack.config.js",
-    "watch-web": "webpack --watch --config ./build/web-extension.webpack.config.js",
-    "package-web": "webpack --mode production --devtool hidden-source-map --config ./build/web-extension.webpack.config.js"
+    "watch-web": "webpack --watch --config ./build/web-extension.webpack.config.js"
   },
   "devDependencies": {
     "@types/glob": "^7.1.3",
