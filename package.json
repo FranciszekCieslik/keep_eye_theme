@@ -118,7 +118,7 @@
       }
     }
   },
-  "browser": "./dist/web/extension.js",
+  "browser": "./src/extension.js",
   "main": "./out/src/extension",
   "scripts": {
     "vscode:prepublish": "npm run compile",
