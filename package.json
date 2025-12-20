@@ -4,7 +4,7 @@
   "description": "vsc dark theme with green indents",
   "icon": "./assets/logo.jpg",
   "license": "MIT",
-  "version": "4.0.0",
+  "version": "1.0.0",
   "publisher": "HupanCoder",
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
     "Other"
   ],
   "activationEvents": [
-    "*"
+    "workspaceContains:**/*.json"
   ],
   "contributes": {
     "themes": [
@@ -118,7 +118,7 @@
       }
     }
   },
-  "browser": "./src/extension.js",
+  "browser": "./src/extension.ts",
   "main": "./out/src/extension",
   "scripts": {
     "vscode:prepublish": "npm run compile",
